@@ -277,8 +277,3 @@ public class RegistrationTest {
     }
 
 }
-
-
-
-
-
