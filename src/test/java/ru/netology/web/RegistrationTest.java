@@ -29,12 +29,9 @@ public class RegistrationTest {
     void shouldBeValidCity() {
         String meetingDate = getLocalDate(13);
         $("[data-test-id=city] input").setValue("Санкт-Петербург");
-       // $("[placeholder='Город']").setValue("Санкт-Петербург");
         $("[data-test-id=date] [value]").doubleClick().sendKeys(meetingDate);
-        //$("[data-test-id='date'][placeholder='Дата встречи']").sendKeys(meetingDate);
         $x("//*[@data-test-id='name']//input").val("Иван Иванов");
         $x("//*[@data-test-id='phone']//input").val("+79998887766");
-        // $x("//*[@data-test-id='phone']//input").click();
         $x("//*[@data-test-id='agreement']").click();
         $x("//*[@class='button__text']").click();
         $x("//*[@data-test-id='notification']").should(visible, Duration.ofSeconds(15));
